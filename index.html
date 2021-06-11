@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			text-decoration: none;
+		}
+		.main{
+			height:350px;
+			width: 250px;
+			background-image: url('asp$.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			perspective: 1000px;
+		}
+		.sub{
+			height:100%;
+			width: 100%;
+			background-color: red;
+			position: absolute;	
+			transform: rotateY(0deg);
+			transform-origin: left;
+			transform-style: preserve-3d;
+			transition: all 0.5s linear;
+		}
+		.main:hover > .sub{
+			transform: rotateY(-180deg);
+		}
+		figure{
+			display: block;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			backface-visibility: hidden;
+		}
+		.font{
+         background-image: url('Cover.jpg');
+	     background-repeat: no-repeat;
+		 background-size: cover;
+		}
+		.back{
+		 background-image: url('Asp.png');
+	     background-repeat: no-repeat;
+		 background-size: cover;
+		 transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="sub">
+			<figure class="font"></figure>
+			<figure class="back"></figure>
+		</div>
+	</div>
+</body>
+</html>
